@@ -125,24 +125,14 @@ namespace LotteryGame
         {
 
             Console.WriteLine("Select the numbers you want to play from 1 to 49.");
+            Console.WriteLine();
 
-
-
-            Console.Write("Number one: ");
-
-            no1 = Convert.ToInt32(Console.ReadLine());
-
-            if ((no1 < 1) || (no1 > 49))
-
+            do
             {
-
-                Console.WriteLine("Select a number between 1 and 49.");
-
+                Console.Write("Number one: ");
                 no1 = Convert.ToInt32(Console.ReadLine());
-
             }
-
-
+            while ((no1 < 1) || (no1 > 49));
 
             do
 
@@ -152,40 +142,17 @@ namespace LotteryGame
 
                 no2 = Convert.ToInt32(Console.ReadLine());
 
-                if ((no2 < 1) || (no2 > 49))
-
-                {
-
-                    Console.WriteLine("Select a number between 1 and 49.");
-
-                    no2 = Convert.ToInt32(Console.ReadLine());
-
-                }
-
-            } while (no2 == no1);
-
-
+            } while (no2 == no1 || no2 < 1 || no2 > 49);
 
             do
 
             {
-
+      
                 Console.Write("Number three: ");
 
                 no3 = Convert.ToInt32(Console.ReadLine());
 
-                if ((no3 < 1) || (no3 > 49))
-
-                {
-
-                    Console.WriteLine("Select a number between 1 and 49.");
-
-                    no3 = Convert.ToInt32(Console.ReadLine());
-
-                }
-
-            } while ((no3 == no2) || (no3 == no1));
-
+            } while ((no3 == no2) || (no3 == no1) || no3 < 1 || no3 > 49);
 
 
             do
@@ -196,19 +163,7 @@ namespace LotteryGame
 
                 no4 = Convert.ToInt32(Console.ReadLine());
 
-                if ((no4 < 1) || (no4 > 49))
-
-                {
-
-                    Console.WriteLine("Select a number between 1 and 49.");
-
-                    no4 = Convert.ToInt32(Console.ReadLine());
-
-                }
-
-            } while ((no4 == no3) || (no4 == no2) || (no4 == no1));
-
-
+            } while ((no4 == no3) || (no4 == no2) || (no4 == no1) || no4 < 1 || no4 > 49);
 
             do
 
@@ -218,19 +173,7 @@ namespace LotteryGame
 
                 no5 = Convert.ToInt32(Console.ReadLine());
 
-                if ((no5 < 1) || (no5 > 49))
-
-                {
-
-                    Console.WriteLine("Select a number between 1 and 49.");
-
-                    no5 = Convert.ToInt32(Console.ReadLine());
-
-                }
-
-            } while ((no5 == no4) || (no5 == no3) || (no5 == no2) || (no5 == no1));
-
-
+            } while ((no5 == no4) || (no5 == no3) || (no5 == no2) || (no5 == no1) || no5 < 1 || no5 > 49);
 
             do
 
@@ -240,24 +183,12 @@ namespace LotteryGame
 
                 no6 = Convert.ToInt32(Console.ReadLine());
 
-                if ((no6 < 1) || (no6 > 49))
-
-                {
-
-                    Console.WriteLine("Select a number between 1 and 49.");
-
-                    no6 = Convert.ToInt32(Console.ReadLine());
-
-                }
-
-            } while ((no6 == no5) || (no6 == no4) || (no6 == no3) || (no6 == no2) || (no6 == no1));
-
+            } while ((no6 == no5) || (no6 == no4) || (no6 == no3) || (no6 == no2) || (no6 == no1) || no6 < 1 || no6 > 49);
 
 
             Console.WriteLine($"The numbers selected for play are: {no1}, {no2}, {no3}, {no4}, {no5}, {no6}.");
 
             Console.WriteLine("Good Luck!");
-
         }
 
 
